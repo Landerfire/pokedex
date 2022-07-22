@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-neutral-200 text-darkBg-darker-extreme font-mono;
+	}
+
+	.dark {
+		@apply bg-darkBg-darker text-customWhite;
+	}
+}
