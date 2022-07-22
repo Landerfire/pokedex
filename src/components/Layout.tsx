@@ -45,8 +45,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<>
 			<Head>
-				<title>Pokedex</title>
 				<meta name="description" content="Pokemon pokedex app" />
+				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+				<title>Pokedex</title>
 			</Head>
 
 			<header className="bg-gray-300 dark:bg-slate-900 sticky top-0 z-50 h-14">
