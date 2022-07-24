@@ -1,68 +1,27 @@
-enum pokemonTypes {
-	"normal",
-	"fighting",
-	"flying",
-	"poison",
-	"ground",
-	"rock",
-	"bug",
-	"ghost",
-	"steel",
-	"fire",
-	"water",
-	"grass",
-	"electric",
-	"psychic",
-	"ice",
-	"dragon",
-	"dark",
-	"fairy",
-	"unknown",
-	"shadow",
-}
+import { PokemonTypes } from "./pokemons"
 
 export interface DoubleDamageFrom {
-	name:
-		| "normal"
-		| "fighting"
-		| "flying"
-		| "poison"
-		| "ground"
-		| "rock"
-		| "bug"
-		| "ghost"
-		| "steel"
-		| "fire"
-		| "water"
-		| "grass"
-		| "electric"
-		| "psychic"
-		| "ice"
-		| "dragon"
-		| "dark"
-		| "fairy"
-		| "unknown"
-		| "shadow"
+	name: PokemonTypes
 	url: string
 }
 
 export interface DoubleDamageTo {
-	name: string
+	name: PokemonTypes
 	url: string
 }
 
 export interface HalfDamageFrom {
-	name: string
+	name: PokemonTypes
 	url: string
 }
 
 export interface HalfDamageTo {
-	name: string
+	name: PokemonTypes
 	url: string
 }
 
 export interface NoDamageTo {
-	name: string
+	name: PokemonTypes
 	url: string
 }
 

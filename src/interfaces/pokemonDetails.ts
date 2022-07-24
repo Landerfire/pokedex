@@ -1,3 +1,5 @@
+import { PokemonTypes } from "./pokemons"
+
 export interface Ability2 {
 	name: string
 	url: string
@@ -305,27 +307,7 @@ export interface Stat {
 }
 
 export interface Type2 {
-	name:
-		| "normal"
-		| "fighting"
-		| "flying"
-		| "poison"
-		| "ground"
-		| "rock"
-		| "bug"
-		| "ghost"
-		| "steel"
-		| "fire"
-		| "water"
-		| "grass"
-		| "electric"
-		| "psychic"
-		| "ice"
-		| "dragon"
-		| "dark"
-		| "fairy"
-		| "unknown"
-		| "shadow"
+	name: PokemonTypes
 	url: string
 }
 

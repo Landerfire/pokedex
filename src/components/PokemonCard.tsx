@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
-import { IPokemonNameAndLink } from "../interfaces/pokemonsList"
+import { IPokemonNameAndLink } from "../interfaces/pokemons"
 
 interface PokemonCardProps {
 	monster: IPokemonNameAndLink
@@ -10,30 +10,12 @@ interface PokemonCardProps {
 
 const PokemonCard: FC<PokemonCardProps> = ({ monster, index }) => {
 	const pokemonNumber = ("000" + (index + 1)).slice(-3)
-	const pokemonName = monster.name[0].toUpperCase() + monster.name.slice(1)
-
-	// function getPokemonNumber(index: number): string {
-	// 	function addZeros(array: string[]): string[] {
-	// 		array.unshift("0")
-	// 		if (array.length < 3) {
-	// 			addZeros(array)
-	// 		}
-	// 		return array
-	// 	}
-
-	// 	const stringifyedIndex = index.toString()
-	// 	if (stringifyedIndex.length < 3) {
-	// 		return addZeros(stringifyedIndex.split("")).join("")
-	// 	}
-	// 	return stringifyedIndex
-	// }
+	const pokemonName = monster.name
 
 	return (
 		<Link href={`/pokemon/${index + 1}`}>
 			<li className="bg-neutral-50 dark:bg-darkBg cursor-pointer list-none flex flex-col items-center border-y-2 border-x-2 border-darkBg-darker dark:border-darkBg-lighter-extreme rounded-md relative">
-				<span className="absolute text-5xl opacity-50 font-semibold top-0 right-2">
-					{`${pokemonNumber}`}
-				</span>
+				<span className="absolute text-5xl opacity-50 font-semibold top-0 right-2">{`${pokemonNumber}`}</span>
 				<Image
 					src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonNumber}.png`}
 					alt={`${pokemonNumber}.${pokemonName}`}

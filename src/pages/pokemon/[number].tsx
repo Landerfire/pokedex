@@ -16,7 +16,7 @@ const Pokemon: NextPage<PokemonPageProps> = ({ pokemonDetails, firstTypeDetails,
 
 	return (
 		<Layout>
-			<div className="mx-20 flex items-center lg:justify-around">
+			<div className="mx-20 flex items-center justify-around flex-col lg:flex-row">
 				<section className="w-[600px] h-[600px] relative px-4 pb-4 flex flex-col items-center justify-center bg-neutral-50 dark:bg-darkBg-lighter rounded-xl drop-shadow-md shadow-md">
 					<span className="absolute text-8xl opacity-30 font-semibold bottom-0 right-2">{`${pokemonNumber}`}</span>
 					<div className="text-5xl uppercase mt-2 dark:text-amber-400">{pokemonDetails.name}</div>
