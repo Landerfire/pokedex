@@ -1,7 +1,9 @@
 import type { GetStaticProps, NextPage } from "next"
+import Link from "next/link"
 import { useState } from "react"
 import Layout from "../components/Layout"
 import PokemonCard from "../components/PokemonCard"
+import PokemonList from "../components/PokemonList"
 import { IPokemons } from "../interfaces/pokemons"
 
 interface HomePageProps {
@@ -25,11 +27,14 @@ const Home: NextPage<HomePageProps> = ({ initialPokemons }) => {
 
 	return (
 		<Layout>
-			<ul className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+			{/* <ul className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
 				{pokemons.results.map((monster, index) => (
-					<PokemonCard key={index} monster={monster} index={index + offset} />
+					<Link key={index} href={`/pokemon/${index + 1}`}>
+						<PokemonCard monster={monster} index={index + offset} />
+					</Link>
 				))}
-			</ul>
+			</ul> */}
+			<PokemonList pokemons={pokemons} offset={offset} />
 
 			<div className="flex justify-center gap-5 m-5 ">
 				<button

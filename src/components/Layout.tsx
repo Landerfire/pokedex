@@ -53,24 +53,26 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 			<header className="bg-gray-300 dark:bg-slate-900 sticky top-0 z-50 h-14">
 				<div className="shadow-lg h-full">
 					<div className="container max-w-[1440px] mx-auto h-full flex flex-col ">
-						<div className="relative flex items-center justify-between mx-4 h-full py-1">
-							<nav className="flex min-w-[120px]">
+						<div className="relative flex items-center sm:justify-between justify-center mx-4 h-full py-1">
+							<nav className="flex w-32 sm:visible invisible sm:relative absolute left-0">
 								<Link href="/">Home</Link>
 							</nav>
 							<Link href="/">
-								<h1 className="cursor-pointer text-5xl drop-shadow-md mx-auto text-slate-900 dark:text-red-600">
-									PokeDex
-								</h1>
+								<a>
+									<h1 className="cursor-pointer text-5xl drop-shadow-md mx-auto text-slate-900 dark:text-red-600">
+										PokeDex
+									</h1>
+								</a>
 							</Link>
-							<div className="flex justify-around items-center min-w-[120px]">
+							<div className="flex justify-around items-center sm:w-32 sm:relative absolute right-2">
 								<button
-									className="bg-white text-black border-solid border-black border-[1px] p-1 rounded-md"
+									className="sm:w-14 sm:h-8 w-5 h-5 text-transparent bg-white sm:text-black border-solid border-black border-[1px] p-1 rounded-md"
 									onClick={() => changeTheme("light")}
 								>
 									Light
 								</button>
 								<button
-									className="bg-slate-700 text-white border-solid border-black border-[1px] p-1 rounded-md ml-2"
+									className="sm:w-14 sm:h-8 w-5 h-5 text-transparent bg-slate-700 sm:text-white border-solid border-black border-[1px] p-1 rounded-md ml-2"
 									onClick={() => changeTheme("dark")}
 								>
 									Dark

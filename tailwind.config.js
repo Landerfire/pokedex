@@ -12,11 +12,10 @@ module.exports = {
 				"darkBg-lighter-extreme": "rgb(203 213 225)",
 				pinkParadise: "rgb(240, 56, 107)",
 				customWhite: "#fbfffe",
-				normalType: "rgb(177,175,128)"
 			},
-			gradientColorStops: {
-				normalTypeEnd: "rgb(142,142,96)",
-			},
+			screens: {
+				
+			}
 		},
 	},
 	plugins: [],
